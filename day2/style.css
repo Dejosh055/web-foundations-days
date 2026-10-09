@@ -1,0 +1,172 @@
+---------- Reset ----------
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f7f7f9;
+}
+
+/* ---------- Header ---------- */
+header {
+  background: #2b3a67;
+  color: #fff;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+header h1 {
+  margin: 0 0 4px;
+}
+
+header p {
+  margin: 0 0 16px;
+  opacity: 0.85;
+}
+
+/* ---------- Navigation (Flexbox) ---------- */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #fff;
+  color: #2b3a67;
+}
+
+/* ---------- Main ---------- */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+section {
+  margin-bottom: 32px;
+}
+
+/* ---------- Features (CSS Grid cards) ---------- */
+.features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.features li {
+  background: #fff;
+  border: 1px solid #d5d8e0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Shortcuts table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th,
+td {
+  border: 1px solid #b8bdcc;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+th {
+  background: #e8ebf5;
+}
+
+/* ---------- Feedback form ---------- */
+form p {
+  margin: 0 0 16px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font: inherit;
+  border: 1px solid #b8bdcc;
+  border-radius: 4px;
+  background: #fff;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #2b3a67;
+  outline-offset: 1px;
+}
+
+/* ---------- Buttons ---------- */
+button {
+  padding: 10px 20px;
+  font: inherit;
+  color: #fff;
+  background: #2b3a67;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+button:hover {
+  background: #44589f;
+  transform: translateY(-1px);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 16px;
+  color: #555;
+  border-top: 1px solid #d5d8e0;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  main {
+    padding: 16px 12px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}
