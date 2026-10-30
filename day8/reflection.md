@@ -1,0 +1,7 @@
+# Reflection
+
+The most difficult concept for me was concurrency: what happens when two people do the same thing at the same moment. At first I thought checking whether a seat was free and then saving the booking was enough. It was hard to see that another person could take the seat between those two steps. I overcame it by testing instead of only reading. I wrote a small SQL experiment where 30 attempts hit the same seat at once, and I saw that a single conditional UPDATE, a transaction and a unique constraint let exactly one attempt win. Seeing the failure and the fix with real numbers made the idea stick.
+
+Based on the feedback I received, I would improve my capstone's documentation and its testing. My design documents explain the architecture well, but I should add clearer diagrams of the request flows and state my assumptions more carefully, because the estimates depend on them. In my API client, I would add automated tests, so I do not have to click through the page by hand to check that errors and loading states work. I would also make the client keep its notes after a refresh, for example with localStorage.
+
+Next I want to learn how to build and deploy a real backend, so that my API design becomes working code. I plan to start with a Node.js server connected to a PostgreSQL database, then learn authentication and how to test an API automatically. After that I want to try caching and queues in a small project, so I can feel the trade-offs I only described on paper.
